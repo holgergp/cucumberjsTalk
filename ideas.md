@@ -1,3 +1,52 @@
+## Kontext
+ - SPA
+ - Offline
+ - Begrenzter Server Zugriff
+ - => Teststrategie
+
+## Was will ich sagen:
+- SPA Testing Strategy
+- Natürliche Sprache
+- Ausführbare Dokumentation
+- Beschreibung eines Verhaltens/Ticktets/Task
+  - Überprüfbar
+- Kollaboration
+  - Diskussion um Fachlichkeit starten
+- Warum reicht dafür nicht Jest
+- Wo sind die Unterscheide zu say Java Cucumbers
+  - Was finde ich besser als an anderen Lösungen
+  - Keine/Weniger Regexp
+- Wann sollte ich das machen, wann nicht?
+- Unterschied zu Unit Tests
+
+- Bestandteile
+  - world.js
+  - hooks.js
+- Start
+  - Missing Step Definition
+  - 
+- JSDom/Pupeteer
+- Wiederverwendung
+- Enzyme/html query
+
+- Arrange brief
+- Act über UI
+- Assert as you like
+  - State
+
+
+## Aufbau
+- Welches Problem möchte ich lösen?
+- Wie kann mir Cucumber da helfen?
+- Wie starte ich mit Cucumber
+- Wie mache ich mit Cucumber weiter?
+- 
+## Resources
+- https://www.youtube.com/watch?v=Wapb_LIS45E
+- https://www.youtube.com/watch?v=L3rHsE-nA78
+- https://docs.cucumber.io/
+- https://github.com/cucumber/cucumber-js
+
 Unit Testing ist cool, aber reicht leider nicht. => Testpyramide
 Cucumber ist ein Weg um eine Anwendung im Ganzen zu testen.
 (Falls es die Fachlichkeit erfordert, mockt man das Backend komplett weg.)
