@@ -20,8 +20,11 @@
 - Unterschied zu Unit Tests
 
 - Bestandteile
+  - Gherkin
   - world.js
   - hooks.js
+  - Features
+  - Step Definition
 - Start
   - Missing Step Definition
   - 
