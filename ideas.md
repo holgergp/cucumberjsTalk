@@ -40,6 +40,8 @@
 
 ## Aufbau
 - Welches Problem möchte ich lösen?
+  - Große SPA testen
+  - 
 - Wie kann mir Cucumber da helfen?
 - Wie starte ich mit Cucumber
 - Wie mache ich mit Cucumber weiter?
@@ -49,6 +51,17 @@
 - https://www.youtube.com/watch?v=L3rHsE-nA78
 - https://docs.cucumber.io/
 - https://github.com/cucumber/cucumber-js
+
+## Abstract
+
+Testen, Frontend, SPA, Offline, BDD, Cucumber.js
+
+
+Ich möchte in meinem Vortrag mit Cucumber.js ein Werkzeug und eine Herangehensweise vorstellen, mit der sich 
+
+Mal ganz ehrlich: Testen im Frontend hat noch nie viel Spaß gemacht. In meinem Talk möchte ich mit Jest eine Testbibliothek vorstellen, die genau das ändern kann. Jest ist ohne viel Konfiguration direkt einsetzbar und bringt alles mit was man von einer Testbibliothek erwartet (und noch mehr). An vielen praktischen Beispielen möchte ich meine Lieblingsfeatures wie z.B. Snapshot Tests, Mocking oder das tolle CLI erläutern und zeigen, dass Testen im Frontend durchaus Spaß machen kann! Eine Ausrede weniger um auf das Testen im Frontend zu verzichten!
+
+## Scratchpad
 
 Unit Testing ist cool, aber reicht leider nicht. => Testpyramide
 Cucumber ist ein Weg um eine Anwendung im Ganzen zu testen.
@@ -79,10 +92,8 @@ Das können vielleicht FBler auch schreiben, zumindest lesen.
 Dies kann versioniert werden.
 
 
-
-
-Advancederer Topic:
-Performance
-CI
-Wiederverwendung
+## Advance Topics/ Ausblick
+- Performance
+- CI
+- Wiederverwendung
 
