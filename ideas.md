@@ -97,3 +97,10 @@ Dies kann versioniert werden.
 - CI
 - Wiederverwendung
 
+
+## Alternative Themen
+ - Software Engineering in the frontend - Tools. Techniken 
+   - Testing
+   - Typsystem
+   - SOLID
+   - Team (keine Trennung)
