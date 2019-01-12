@@ -54,14 +54,42 @@
 
 ## Abstract
 
-Testen, Frontend, SPA, Offline, BDD, Cucumber.js
+Cucumber.js - ATDD und BDD für das Frontend
 
+Akzeptanztests in natürlicher Sprache für das Frontend? Lohnt sich das? 
+Wenn man mich fragt: Ganz klar ja! Denn die Frontends, die wir heutzutage bauen, werden immer komplexer und da können wir jede Hilfe gebrauchen.
+Cucumber.js ist eine BDD Testbibiothek, welche mir ermöglicht solche Akzeptanztest in natürlicher Sprache zu schreiben und automatisiert in meinen Client Build Workflow auszuführen.
+Ich möchte in meinem Vortrag zeigen, dass das Schreiben dieser Tests mit Cucumber.js gar nicht aufwändig sein muss und wie das Team davon profitiert, dass mit diesen Tests Fachlichkeit und Technik näher zusammenrücken.
 
-Ich möchte in meinem Vortrag mit Cucumber.js ein Werkzeug und eine Herangehensweise vorstellen, mit der sich 
+### Lernziele
+
+## Alter Abstract
 
 Mal ganz ehrlich: Testen im Frontend hat noch nie viel Spaß gemacht. In meinem Talk möchte ich mit Jest eine Testbibliothek vorstellen, die genau das ändern kann. Jest ist ohne viel Konfiguration direkt einsetzbar und bringt alles mit was man von einer Testbibliothek erwartet (und noch mehr). An vielen praktischen Beispielen möchte ich meine Lieblingsfeatures wie z.B. Snapshot Tests, Mocking oder das tolle CLI erläutern und zeigen, dass Testen im Frontend durchaus Spaß machen kann! Eine Ausrede weniger um auf das Testen im Frontend zu verzichten!
 
 ## Scratchpad
+
+
+Komplexere Anwendungen => Komplexere Anforderungen auf dem Client => An
+
+BDD => Cucumber.js => Kollaboration/Struktur => Ausführbare Tests
+Testen, Frontend, SPA, Offline, BDD, Cucumber.js
+
+
+Cucumber.js ist eine Testbibliothek, die es mir ermöglicht Akzeptanztests in natürlicher Sprache zu formulieren.
+Heutzutage werden die Frontends, die wir bauen, immer komplexer. Um dieser Komplexität Herr zu werden helfen meinem Team und mir solche automatisierten, lesbaren und wartbaren Tests ungemein.
+Ich möchte in meinem Talk ein Vorgehen zeigen, 
+
+Die Frontends die wir heutzutage werden immer größer und komplexer.  Kommt dann noch offline-first mit in die Gleichung so ist ein Frontend schlussendlich viel komplexer als das dazugehörige Backend. 
+Spätestens dann kommt der Bedarf im Team "anders" mit den zugrundenliegenden Anforderungen umzugehen und BDD ist ein Stichwort das dann häufig fällt.
+Ich möchte mit cucumber.js ein Werkzeug vorstellen, dass das Team dabei unterstützt die umzusetzenden Anforderungen besser zu verstehen und dieses Verständnis über automatisierte Tests überprüfbar macht.
+Ich möchte in meinem Talk einen Ansatz vorstellen, der aus meiner Sicht gut funktioniert,wo
+
+Ein Ansatz der meiner Ansicht nach gut funktioniert ist
+Spätestens dann kommt 
+In einem solchen Szenario kommt man spätestens mit alleinigen Unit Tests an die Grenzen.
+Ich möchte in diesem Talk mit cucumber.js ein Werkzeug vorstellen, mit der dieser steigenden Komplexität Rechung getragen wird.
+Ich werde eine Vorgehen vorstellen, welches das Entwicklungsteam dabei unterstützt Anforderungen als Tests zu formulieren und die Anforderungen überprüfbar macht, fachliche Kommunikation fördert und das Team unterstützt.
 
 Unit Testing ist cool, aber reicht leider nicht. => Testpyramide
 Cucumber ist ein Weg um eine Anwendung im Ganzen zu testen.
