@@ -61,7 +61,11 @@ Wenn man mich fragt: Ganz klar ja! Denn die Frontends, die wir heutzutage bauen,
 Cucumber.js ist eine BDD Testbibiothek, welche mir ermöglicht solche Akzeptanztest in natürlicher Sprache zu schreiben und automatisiert in meinen Client Build Workflow auszuführen.
 Ich möchte in meinem Vortrag zeigen, dass das Schreiben dieser Tests mit Cucumber.js gar nicht aufwändig sein muss und wie das Team davon profitiert, dass mit diesen Tests Fachlichkeit und Technik näher zusammenrücken.
 
-### Lernziele
+## Vorkenntnisse:
+Grundlegende JavaScript-Kenntnisse. 
+
+## Lernziele:
+Die Zuhörer sollen ein Gefühl für das Schreiben von natürlichsprachigen Tests mit cucumber.js bekommen und besser beurteilen können, ob diese Form der Tests einen Benefit für sie bringt.
 
 ## Alter Abstract
 
