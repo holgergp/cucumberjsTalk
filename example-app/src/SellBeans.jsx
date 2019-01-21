@@ -16,10 +16,10 @@ const SellBeans = ({bohnen,updateData}) => {
             <tbody>
                 {bohnen.map((bohne) => (
                     <tr key={bohne.id}>
-                        <td><input type="text" onChange={(event)=> updateData({...bohne, art: event.target.value})} value={bohne.art}/></td>
-                        <td><input type="number" onChange={(event)=> updateData({...bohne, ekp: event.target.value})} value={bohne.ekp}/></td>
-                        <td><input type="number" onChange={(event)=> updateData({...bohne, marge: event.target.value})}value={bohne.marge}/></td>
-                        <td><input type="number" onChange={(event)=> updateData({...bohne, vkp: event.target.value})} value={bohne.vkp}/></td>
+                        <td><input type="text" id="art"  onChange={(event)=> updateData({...bohne, art: event.target.value})} value={bohne.art}/></td>
+                        <td><input type="number" id="ekp" onChange={(event)=> updateData({...bohne, ekp: event.target.value})} value={bohne.ekp}/></td>
+                        <td><input type="number" id="marge" onChange={(event)=> updateData({...bohne, marge: event.target.value})}value={bohne.marge}/></td>
+                        <td><input type="number" id="vkp" onChange={(event)=> updateData({...bohne, vkp: event.target.value})} value={bohne.vkp}/></td>
                     </tr>
                 ))}
             </tbody>
