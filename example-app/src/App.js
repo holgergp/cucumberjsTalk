@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.scss';
+import './styles/App.scss';
 import SellBeans from './SellBeans';
 import {createStore, applyMiddleware} from 'redux';
 import rootReducer from './reducer';
