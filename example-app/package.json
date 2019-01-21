@@ -11,11 +11,33 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6"
   },
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "cucumber": "^4.0.0",
+    "cucumber-html-reporter": "^4.0.0",
+    "cucumber-pretty": "^1.3.2",
+    "gherkin-lint": "^2.8.0",
+    "redux-test-utils": "^0.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gherkin": "node_modules/.bin/gherkin-lint",
+    "test:cucumber": "cross-env NODE_ENV=test BABEL_ENV=test IS_CUCUMBER_TEST=true node_modules/.bin/cucumber-js",
+    "test:cucumber:debug": "cross-env DEBUG=true npm run test:cucumber",
+    "test:cucumber:trace": "npm run test:cucumber -- -p trace",
+    "test:cucumber:now": "npm run test:cucumber -- -p now",
+    "test:cucumber:now:trace": "npm run test:cucumber -- -p traceNow",
+    "test:cucumber:now:actionOutline": "cross-env ACTION_OUTLINE=true npm run test:cucumber:now",
+    "test:cucumber:usage": "cross-env NODE_ENV=test BABEL_ENV=test npm run test:cucumber -- -p usage",
+    "test:coverage": "npm run test:coverage:clean && npm run test:coverage:unit && npm run test:coverage:cucumber && npm run test:coverage:collect && npm run test:coverage:cucumber:report",
+    "test:coverage:clean": "rm -rf .nyc_output coverage/*",
+    "test:coverage:cucumber": "mkdir -p coverage && cross-env NODE_ENV=test IS_CUCUMBER_TEST=true nyc --silent node_modules/.bin/cucumber-js -p coverage && npm run test:coverage:cucumber:report",
+    "test:coverage:cucumber:report": "node cucumber_report.js"
   },
   "eslintConfig": {
     "extends": "react-app"
