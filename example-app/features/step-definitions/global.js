@@ -4,7 +4,7 @@ import React from 'react';
 import App from '../../src/App';
 
 export async function oeffneAnwendung(world) {
-    world.wrapper = mount(<App store={world.store.store}/>,
+    world.wrapper = mount(<App store={world.store}/>,
         {attachTo: world.root});
 }
 

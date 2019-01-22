@@ -14,7 +14,7 @@ const SellBeans = ({bohnen,updateData}) => {
                 </tr>
             </thead>
             <tbody>
-                {bohnen.map((bohne) => (
+                {bohnen && bohnen.map((bohne) => (
                     <tr key={bohne.id}>
                         <td><input type="text" id="art"  onChange={(event)=> updateData({...bohne, art: event.target.value})} value={bohne.art}/></td>
                         <td><input type="number" id="ekp" onChange={(event)=> updateData({...bohne, ekp: event.target.value})} value={bohne.ekp}/></td>

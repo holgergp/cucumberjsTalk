@@ -1,8 +1,9 @@
 import {setWorldConstructor} from 'cucumber';
-import { createMockStore } from 'redux-test-utils';
+import {createStore} from 'redux';
+import reducers from '../../src/reducer';
 
 function BaristaWorld() {
-    this.store = createMockStore();
+    this.store = createStore(reducers);
     this.wrapper = undefined;
     this.lastRedirect = undefined;
 }

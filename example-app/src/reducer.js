@@ -9,7 +9,6 @@ const INITIAL_STATE = [{id: 1, art: 'Äthiopien', vkp: 10.00, marge: 20.00, ekp:
 
 const bohnen = (state = INITIAL_STATE, action) => {
     const bohne  = action.bohne;
-    console.log('Hier');
     switch (action.type) {
         case 'UPDATE_DATA':
             return state.map(s => s.id === bohne.id ? {
