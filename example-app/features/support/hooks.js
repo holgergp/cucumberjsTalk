@@ -7,7 +7,7 @@ Before('not @integrationTest', function () {
 });
 
 After('not @integrationTest', function () {
-    _unmountUI(this);_unmountUI(this);
+    _unmountUI(this);
 });
 
 function _unmountUI(world) {
