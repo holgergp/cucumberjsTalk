@@ -9,6 +9,6 @@ Funktionalität: Rabatt für eine Bohnenart berechnen
     Angenommen es gibt folgende Bohnenarten in Barista Pro
       | Bohne     | Einkaufspreis in Euro | Marge in Prozent | Verkaufspreis in Euro |
       | Äthiopien | 10                    | 30               | 13                    |
-    Wenn der Bohnenverkäufer einen Rabatt von 10% gewährt
-    Dann ist der Rabatt von 10% auf der Oberfläche sichtbar
-    Und ist der neue Verkaufspreis 11,7 Euro
+    Wenn der Bohnenverkäufer einen Rabatt von "10" Prozent gewährt
+    Dann ist der Rabatt von "10" Prozent auf der Oberfläche sichtbar
+    Und ist der neue Verkaufspreis '11.70' Euro
