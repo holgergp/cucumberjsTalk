@@ -21,3 +21,11 @@ export function select(selector) {
     }
     return node;
 }
+
+export function selectByWrapper(selector) {
+    const node = document.querySelector(selector);
+    if (!node) {
+        throw new Error(`Element for selector ${selector} not found`);
+    }
+    return node;
+}

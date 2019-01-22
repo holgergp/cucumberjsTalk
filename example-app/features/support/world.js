@@ -1,5 +1,6 @@
 import {setWorldConstructor} from 'cucumber';
 import {createStore} from 'redux';
+
 import reducers from '../../src/reducer';
 
 function BaristaWorld() {
