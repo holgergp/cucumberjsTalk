@@ -1,5 +1,5 @@
 $table-background-color: #DDEEEE;
-
+$disabled-color: rgba(211, 211, 211, 0.45);
 
 .App {
     text-align: center;
@@ -26,7 +26,7 @@ table {
             border: solid 1px $table-background-color;
             color: #336B6B;
             padding: 10px;
-            text-align: left;
+            text-align: center;
             text-shadow: 1px 1px 1px #fff;
         }
     }
@@ -39,4 +39,10 @@ table {
             text-shadow: 1px 1px 1px #fff;
         }
     }
+}
+
+input:disabled {
+    background-color: $disabled-color;
+    border-color: $disabled-color;
+    border-style: solid;
 }

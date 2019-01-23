@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import './styles/App.scss';
 import SellBeans from './SellBeans';
 import {Provider} from 'react-redux';
-import logger from 'redux-logger'
-
 
 class App extends Component {
     render() {
