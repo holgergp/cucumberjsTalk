@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './styles/App.scss';
-import SellBeans from './SellBeans';
+import Bohnen from './Bohnen';
 import {Provider} from 'react-redux';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
         return (
             <Provider store={this.props.store}>
                 <div className="App">
-                    <SellBeans></SellBeans>
+                    <Bohnen/>
                 </div>
             </Provider>
         );

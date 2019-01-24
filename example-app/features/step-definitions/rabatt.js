@@ -2,6 +2,7 @@ import {updateData} from '../../src/reducer';
 import {Given as Angenommen, Then as Dann, When as Wenn} from 'cucumber';
 import expect from 'expect';
 import {getInputValue, setInputValue} from '../support/puppetMaster';
+import {expectInputToEqual} from '../support/expectations';
 
 Angenommen('es gibt folgende Bohnenarten in der Anwendung', async function (dataTable) {
     for (const row of dataTable.hashes()) {
@@ -19,12 +20,12 @@ Wenn('der Bohnenverkäufer einen Rabatt von {string} Prozent gewährt', function
 });
 
 Dann('ist der Rabatt von {string} Prozent in der Anwendung sichtbar', function (rabatt) {
-    expect(getInputValue('#rabatt').value).toEqual(rabatt);
+    expectInputToEqual('#rabatt', rabatt);
 });
 
-Dann('ist der neue Verkaufspreis {string} Euro', function (vkp) {
-    const vkpNode = document.querySelector('#vkp');
-    expect(vkpNode.value).toEqual(vkp);
+Dann('ist der Verkaufspreis mit Rabatt {string} Euro', function (vkpRabatt) {
+    const vkpRabattNode = document.querySelector('#vkpRabatt');
+    expect(vkpRabattNode.value).toEqual(vkpRabatt);
 });
 
 // noinspection JSUnusedGlobalSymbols
