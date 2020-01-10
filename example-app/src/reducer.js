@@ -17,7 +17,7 @@ const bohnen = (state = INITIAL_STATE, action) => {
                     const vkp = parseFloat(bohne.vkp).toFixed(2);
                     const vkpRabatt = (vkp - (vkp * (rabatt / 100))).toFixed(2);
                     const ekp = parseFloat(bohne.ekp).toFixed(2);
-                    const marge = (((vkp / ekp) - 1) * 100).toFixed(2);
+                    const marge = (((vkpRabatt / ekp) - 1) * 100).toFixed(2);
                     return {
                         id: bohne.id,
                         art: bohne.art,
