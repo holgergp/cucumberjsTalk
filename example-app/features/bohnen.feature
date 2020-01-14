@@ -8,6 +8,7 @@ Funktionalität: Bohnenarten in der Anwendung anzeigen
       | Id | Bohne     | Einkaufspreis in Euro | Marge in Prozent | Verkaufspreis in Euro |
       | 1  | Äthiopien | 10.00                 | 30.00            | 13.00                 |
 
+  @now
   Szenario: Bohnenarten sind in der Anwendung sichtbar
     Dann sind folgende Bohnenarten in der Anwendung sichtbar
       | Bohne     | Einkaufspreis in Euro | Marge in Prozent | Verkaufspreis in Euro |

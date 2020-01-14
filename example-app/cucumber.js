@@ -5,6 +5,7 @@ const now = '--tags @now';
 const notIntegrationTest = '--tags "not @integrationTest"';
 const usage = '--dry-run --format usage';
 const coverage = '--format \'json:coverage/cucumber_report.json\' features/**/*.feature';
+const rR = 'features/**/+(r|R)*.feature';
 
 module.exports = {
     'default': [babel, notIntegrationTest, asyncAwaitSnippets].join(' '),
@@ -12,5 +13,7 @@ module.exports = {
     'traceNow': [babel, now, pretty, asyncAwaitSnippets].join(' '),
     'now': [babel, now, asyncAwaitSnippets].join(' '),
     'usage': [babel, usage].join(' '),
-    'coverage': [babel, coverage, notIntegrationTest].join(' ')
+    'coverage': [babel, coverage, notIntegrationTest].join(' '),
+    'rR': [babel, notIntegrationTest, rR].join(' '),
+
 };

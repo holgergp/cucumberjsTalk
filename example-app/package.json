@@ -43,7 +43,8 @@
     "test:coverage": "npm run test:coverage:clean && npm run test:coverage:unit && npm run test:coverage:cucumber && npm run test:coverage:collect && npm run test:coverage:cucumber:report",
     "test:coverage:clean": "rm -rf .nyc_output coverage/*",
     "test:coverage:cucumber": "mkdir -p coverage && cross-env NODE_ENV=test IS_CUCUMBER_TEST=true nyc --silent node_modules/.bin/cucumber-js -p coverage && npm run test:coverage:cucumber:report",
-    "test:coverage:cucumber:report": "node cucumber_report.js"
+    "test:coverage:cucumber:report": "node cucumber_report.js",
+    "test:cucumber:rR": "npm run test:cucumber -- -p rR"
   },
   "eslintConfig": {
     "extends": "react-app"
