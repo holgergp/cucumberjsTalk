@@ -5,7 +5,7 @@ import { Bohne } from "../types";
 @Component({
   selector: "app-beans",
   templateUrl: "./beans.component.html",
-  styleUrls: ["./beans.component.sass"]
+  styleUrls: ["./beans.component.scss"]
 })
 export class BeansComponent implements OnInit {
   private bohnen: Bohne[];
