@@ -1,0 +1,64 @@
+<div className="tableContainer">
+  <table>
+    <thead>
+      <tr>
+        <th><label for="art">Bohnenart</label></th>
+        <th><label for="ekp">Preis beim Händler in Euro</label></th>
+        <th><label for="marge">Marge in Prozent</label></th>
+        <th><label for="rabatt">Rabatt</label></th>
+        <th><label for="vkp">Preis im Laden in Euro ohne Rabatt</label></th>
+        <th><label for="vkpRabatt">Preis im Laden</label></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bohne of bohnen">
+        <td>
+          <input type="text" id="art" value="{{ bohne.art }}" />
+        </td>
+        <td>
+          <input
+            type="number"
+            id="ekp"
+            value="{{ bohne.ekp }}"
+            (change)="calculateLineFromEkp($event, bohne.id)"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            id="marge"
+            disabled="disabled"
+            value="{{ bohne.marge }}"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            id="rabatt"
+            value="{{ bohne.rabatt }}"
+            (change)="calculateLineFromRabatt($event, bohne.id)"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            id="vkp"
+            type="number"
+            id="vkp"
+            value="{{ bohne.vkp }}"
+            (change)="calculateLineFromVkp($event, bohne.id)"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            id="vkpRabatt"
+            disabled="disabled"
+            value="{{ bohne.vkpRabatt }}"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="alterBeans()">Alter Beans</button>
+</div>
