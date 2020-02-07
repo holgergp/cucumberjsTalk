@@ -15,13 +15,13 @@ Funktionalität: Bohnenarten in der Anwendung anzeigen
       | Äthiopien | 10.00                 | 30.00            | 13.00                 |
 
   Szenario: Änderung des Einkaufspreis ist in der Anwendung sichtbar
-    Wenn der Bohnenverkäufer den Einkaufspreis auf "5.00" Euro setzt
+    Wenn der Bohnenverkäufer den Einkaufspreis auf '5.00' Euro setzt
     Dann sind folgende Bohnenarten in der Anwendung sichtbar
       | Bohne     | Einkaufspreis in Euro | Marge in Prozent | Verkaufspreis in Euro |
       | Äthiopien | 5.00                  | 160.00           | 13.00                 |
 
   Szenariogrundriss: Jede Änderung des Einkaufspreis ist in der Anwendung sichtbar
-    Wenn der Bohnenverkäufer den Einkaufspreis auf "<Einkaufspreis>" Euro setzt
+    Wenn der Bohnenverkäufer den Einkaufspreis auf '<Einkaufspreis>' Euro setzt
     Dann sind folgende Bohnenarten in der Anwendung sichtbar
       | Bohne     | Einkaufspreis in Euro | Marge in Prozent | Verkaufspreis in Euro |
       | Äthiopien | <Einkaufspreis>       | <Marge>          | 13.00                 |
