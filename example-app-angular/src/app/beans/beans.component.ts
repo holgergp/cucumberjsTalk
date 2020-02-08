@@ -18,27 +18,24 @@ export class BeansComponent implements OnInit {
   private getBohnen() {
     this.bohnenService.getBohnen().subscribe(bohnen => (this.bohnen = bohnen));
   }
-  private alterBeans() {
-    this.bohnenService.alterBohne();
-  }
 
   private calculateLineFromEkp(event, id) {
     this.bohnenService.calculateLineFromChangeBohne({
       id,
-      ekp: parseFloat(event.target.value)
+      ekp: event.target.value
     });
   }
   private calculateLineFromVkp(event, id) {
     this.bohnenService.calculateLineFromChangeBohne({
       id,
-      vkp: parseFloat(event.target.value)
+      vkp: event.target.value
     });
   }
 
   private calculateLineFromRabatt(event, id) {
     this.bohnenService.calculateLineFromChangeBohne({
       id,
-      rabatt: parseFloat(event.target.value)
+      rabatt: event.target.value
     });
   }
 }

@@ -14,32 +14,27 @@ export class BohnenService {
   }
 
   getBohnen(): Observable<Bohne[]> {
-    console.log("this.bohnenDB", this.bohnenDB);
     return this.bohnenDB;
-  }
-
-  alterBohne(): void {
-    this.bohnenDB.next(BOHNEN.map(b => ({ ...b, art: "Kenya" })));
   }
 
   calculateLineFromChangeBohne(change: ChangeBohne) {
     const bohneFromDB = this.bohnenDB.value.find(b => b.id === change.id);
     const bohneWithChange = { ...bohneFromDB, ...change };
 
-    const rabatt = bohneWithChange.rabatt || 0.0;
-    const vkp = parseFloat(bohneWithChange.vkp.toFixed(2));
+    const rabatt = parseFloat(bohneWithChange.rabatt) || 0.0;
+    const vkp = parseFloat(bohneWithChange.vkp);
     const vkpRabatt = parseFloat((vkp - vkp * (rabatt / 100)).toFixed(2));
-    const ekp = parseFloat(bohneWithChange.ekp.toFixed(2));
+    const ekp = parseFloat(bohneWithChange.ekp);
     const marge = parseFloat(((vkpRabatt / ekp - 1) * 100).toFixed(2));
-    const calculatedBohnen: Bohne[] = BOHNEN.map(b => {
+    const calculatedBohnen: Bohne[] = this.bohnenDB.value.map(b => {
       if (b.id === bohneWithChange.id) {
         return {
           ...b,
-          rabatt,
-          vkp,
-          vkpRabatt,
-          ekp,
-          marge
+          rabatt: rabatt.toFixed(2),
+          vkp: vkp.toFixed(2),
+          vkpRabatt: vkpRabatt.toFixed(2),
+          ekp: ekp.toFixed(2),
+          marge: marge.toFixed(2)
         };
       } else return b;
     });

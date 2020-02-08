@@ -17,7 +17,7 @@
         </td>
         <td>
           <input
-            type="number"
+              type="string"
             id="ekp"
             value="{{ bohne.ekp }}"
             (change)="calculateLineFromEkp($event, bohne.id)"
@@ -33,7 +33,7 @@
         </td>
         <td>
           <input
-            type="number"
+            type="string"
             id="rabatt"
             value="{{ bohne.rabatt }}"
             (change)="calculateLineFromRabatt($event, bohne.id)"
@@ -41,9 +41,7 @@
         </td>
         <td>
           <input
-            type="number"
-            id="vkp"
-            type="number"
+            type="string"
             id="vkp"
             value="{{ bohne.vkp }}"
             (change)="calculateLineFromVkp($event, bohne.id)"
@@ -60,5 +58,4 @@
       </tr>
     </tbody>
   </table>
-  <button (click)="alterBeans()">Alter Beans</button>
 </div>
