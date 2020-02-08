@@ -1,32 +1,19 @@
-import { setWorldConstructor } from "cucumber";
-
-import { getTestBed, TestBed } from "@angular/core/testing";
+import { BeansComponent } from "../../src/app/beans/beans.component";
+import { TestBed } from "@angular/core/testing";
 import { AppComponent } from "../../src/app/app.component";
 import { BohnenService } from "../../src/app/bohnen.service";
-import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting
-} from "@angular/platform-browser-dynamic/testing";
-import '../../src/polyfills'
 
-function BaristaWorld() {
-  console.error('World start');
-  getTestBed().initTestEnvironment(
-    BrowserDynamicTestingModule,
-    platformBrowserDynamicTesting()
-  );
-  // this.store = createStore(reducers);
-  console.error("TestBed");
+export let fixture;
+export let component;
+export let service;
 
-
+export const startApp = async () => {
   TestBed.configureTestingModule({
-    // provide the component-under-test and dependent service
-    declarations: [AppComponent]
-  }).compileComponents().then();
-  this.testBed = getTestBed();
-  this.wrapper = undefined;
-  console.error("World end");
-}
+    declarations: [AppComponent, BeansComponent]
+  }).compileComponents();
+  fixture = TestBed.createComponent(AppComponent);
+  component = fixture.componentInstance;
+  service = TestBed.get(BohnenService);
 
-process.on("unhandledRejection", r => console.error(r));
-setWorldConstructor(BaristaWorld);
+  fixture.detectChanges();
+};
