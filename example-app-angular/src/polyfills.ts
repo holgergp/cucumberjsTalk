@@ -40,7 +40,6 @@
  * https://developers.google.com/search/docs/guides/rendering
  **/
 // import 'core-js/es6/array';
-console.error('Polyfills');
 import 'core-js/es7/reflect';
 
 
