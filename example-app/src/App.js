@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.scss";
-import Bohnen from "./Bohnen";
 import { Provider } from "react-redux";
+import Bohnen from "./Bohnen";
 
 class App extends Component {
   render() {

@@ -1,21 +1,12 @@
 import { combineReducers } from "redux";
+import { TEST_BOHNEN } from "./Test-Bohnen";
 
 export const updateData = bohne => ({
   type: "UPDATE_DATA",
   bohne
 });
 
-const INITIAL_STATE = [
-  {
-    id: "1",
-    art: "Äthiopien",
-    vkp: 12.0,
-    marge: 20.0,
-    ekp: 10.0,
-    rabatt: 0.0,
-    vkpRabatt: 12.0
-  }
-];
+const INITIAL_STATE = TEST_BOHNEN;
 
 const bohnen = (state = INITIAL_STATE, action) => {
   const bohne = action.bohne;
