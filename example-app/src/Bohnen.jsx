@@ -13,9 +13,7 @@ const Bohnen = ({ bohnen, updateData }) => {
             <th>Marge in Prozent</th>
             {/*<th>Rabatt</th>*/}
             <th>Preis im Laden in Euro ohne Rabatt</th>
-{/*
-            <th>Preis im Laden</th>
-*/}
+            {/*<th>Preis im Laden</th>*/}
           </tr>
         </thead>
         <tbody>
