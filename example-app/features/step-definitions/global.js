@@ -1,11 +1,20 @@
-import { mount } from "enzyme";
 import { Given as Angenommen } from "cucumber";
 import React from "react";
-import App from "../../src/App";
+import { updateData } from "../../src/reducer";
+import { oeffneAnwendung } from "../support/application";
 
-export async function oeffneAnwendung(world) {
-  world.wrapper = mount(<App store={world.store} />, { attachTo: world.root });
-}
+Angenommen("es gibt folgende Bohnenarten in der Anwendung", async function(
+  dataTable
+) {
+  for (const row of dataTable.hashes()) {
+    const id = row["Id"];
+    const art = row["Bohne"];
+    const ekp = row["Einkaufspreis in Euro"];
+    const vkp = row["Verkaufspreis in Euro"];
+    const marge = row["Marge in Prozent"];
+    this.store.dispatch(updateData({ id, art, ekp, vkp, marge }));
+  }
+});
 
 Angenommen("die Anwendung ist geöffnet", async function() {
   await oeffneAnwendung(this);
