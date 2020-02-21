@@ -1,13 +1,12 @@
-import {mount} from 'enzyme';
-import {Given as Angenommen} from 'cucumber';
-import React from 'react';
-import App from '../../src/App';
+import { mount } from "enzyme";
+import { Given as Angenommen } from "cucumber";
+import React from "react";
+import App from "../../src/App";
 
 export async function oeffneAnwendung(world) {
-    world.wrapper = mount(<App store={world.store}/>,
-        {attachTo: world.root});
+  world.wrapper = mount(<App store={world.store} />, { attachTo: world.root });
 }
 
-Angenommen('die Anwendung ist geöffnet', async function () {
-    await oeffneAnwendung(this);
+Angenommen("die Anwendung ist geöffnet", async function() {
+  await oeffneAnwendung(this);
 });
