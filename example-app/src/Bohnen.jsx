@@ -11,9 +11,11 @@ const Bohnen = ({ bohnen, updateData }) => {
             <th>Bohnenart</th>
             <th>Preis beim Händler in Euro</th>
             <th>Marge in Prozent</th>
-            <th>Rabatt</th>
+            {/*<th>Rabatt</th>*/}
             <th>Preis im Laden in Euro ohne Rabatt</th>
+{/*
             <th>Preis im Laden</th>
+*/}
           </tr>
         </thead>
         <tbody>
@@ -51,8 +53,8 @@ const Bohnen = ({ bohnen, updateData }) => {
                     value={bohne.marge}
                   />
                 </td>
-                <td>
-                  <input
+                {/* <td>
+                 <input
                     type="number"
                     id="rabatt"
                     onChange={event =>
@@ -60,7 +62,7 @@ const Bohnen = ({ bohnen, updateData }) => {
                     }
                     value={bohne.rabatt}
                   />
-                </td>
+                </td>*/}
                 <td>
                   <input
                     type="number"
@@ -71,8 +73,8 @@ const Bohnen = ({ bohnen, updateData }) => {
                     value={bohne.vkp}
                   />
                 </td>
-                <td>
-                  <input
+                {/*  <td>
+                <input
                     type="number"
                     id="vkpRabatt"
                     disabled={true}
@@ -81,7 +83,7 @@ const Bohnen = ({ bohnen, updateData }) => {
                     }
                     value={bohne.vkpRabatt}
                   />
-                </td>
+                </td>*/}
               </tr>
             ))}
         </tbody>
