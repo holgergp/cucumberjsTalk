@@ -1,10 +1,7 @@
 import ReactTestUtils from "react-dom/test-utils";
 
-export function setInputValue(selectorOrElement, value) {
-  const input =
-    typeof selectorOrElement === "string"
-      ? select(selectorOrElement)
-      : selectorOrElement;
+export function setInputValue(selector, value) {
+  const input = select(selector);
 
   ReactTestUtils.Simulate.focus(input);
   input.value = value;
@@ -12,11 +9,8 @@ export function setInputValue(selectorOrElement, value) {
   ReactTestUtils.Simulate.blur(input);
 }
 
-export function getInputValue(selectorOrElement) {
-  const input =
-    typeof selectorOrElement === "string"
-      ? select(selectorOrElement)
-      : selectorOrElement;
+export function getInputValue(selector) {
+  const input = select(selector);
   return input.value;
 }
 
