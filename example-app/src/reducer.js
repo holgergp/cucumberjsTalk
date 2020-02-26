@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { TEST_BOHNEN } from "./Test-Bohnen";
 
-export const updateData = bohne => ({
+export const updateDataAction = bohne => ({
   type: "UPDATE_DATA",
   bohne
 });

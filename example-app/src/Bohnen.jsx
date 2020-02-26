@@ -1,8 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
-import { updateData } from "./reducer";
+import { useDispatch, useSelector } from "react-redux";
+import { updateDataAction } from "./reducer";
 
-const Bohnen = ({ bohnen, updateData }) => {
+export const Bohnen = () => {
+  const dispatch = useDispatch();
+  const updateData = bohne => dispatch(updateDataAction(bohne));
+  const bohnen = useSelector(state => state.bohnen);
+
   return (
     <div className="tableContainer">
       <table>
@@ -89,13 +93,3 @@ const Bohnen = ({ bohnen, updateData }) => {
     </div>
   );
 };
-
-const mapStateToProps = state => ({
-  bohnen: state.bohnen
-});
-
-const mapDispatchToProps = {
-  updateData
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Bohnen);
