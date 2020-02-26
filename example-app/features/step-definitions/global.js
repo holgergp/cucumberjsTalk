@@ -1,6 +1,6 @@
 import { Given as Angenommen } from "cucumber";
 import React from "react";
-import { updateData } from "../../src/reducer";
+import { updateDataAction } from "../../src/reducer";
 import { oeffneAnwendung } from "../support/application";
 
 Angenommen("es gibt folgende Bohnenarten in der Anwendung", async function(
@@ -12,7 +12,7 @@ Angenommen("es gibt folgende Bohnenarten in der Anwendung", async function(
     const ekp = row["Einkaufspreis in Euro"];
     const vkp = row["Verkaufspreis in Euro"];
     const marge = row["Marge in Prozent"];
-    this.store.dispatch(updateData({ id, art, ekp, vkp, marge }));
+    this.store.dispatch(updateDataAction({ id, art, ekp, vkp, marge }));
   }
 });
 

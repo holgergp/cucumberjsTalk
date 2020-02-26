@@ -16,6 +16,5 @@ import { expectInputToEqual } from "../support/expectations";
 //});
 //
 //Dann("ist der Verkaufspreis mit Rabatt {string} Euro", function(vkpRabatt) {
-//  const vkpRabattNode = document.querySelector("#vkpRabatt");
-//  expect(vkpRabattNode.value).toEqual(vkpRabatt);
+//  expectInputToEqual("#vkpRabatt", vkpRabatt);
 //});
