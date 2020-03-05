@@ -1,7 +1,11 @@
-import { mount } from "enzyme";
 import App from "../../src/App";
 import React from "react";
+import { render } from "@testing-library/react";
+import { logDocument } from "../step-definitions/rabatt";
 
 export async function oeffneAnwendung(world) {
-  world.wrapper = mount(<App store={world.store} />, { attachTo: world.root });
+  world.queries = render(<App store={world.store} />, {
+    container: world.root
+  });
+  logDocument();
 }

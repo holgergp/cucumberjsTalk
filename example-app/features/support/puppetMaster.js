@@ -1,27 +1,17 @@
-import ReactTestUtils from "react-dom/test-utils";
+import userEvent from "@testing-library/user-event";
 
-export function setInputValue(selectorOrElement, value) {
-  const input =
-    typeof selectorOrElement === "string"
-      ? select(selectorOrElement)
-      : selectorOrElement;
-
-  ReactTestUtils.Simulate.focus(input);
-  input.value = value;
-  ReactTestUtils.Simulate.change(input, { target: { value } });
-  ReactTestUtils.Simulate.blur(input);
+export async function setInputValue(selector, value) {
+  await userEvent.type(select(selector), value);
 }
 
-export function getInputValue(selectorOrElement) {
-  const input =
-    typeof selectorOrElement === "string"
-      ? select(selectorOrElement)
-      : selectorOrElement;
+export function getInputValue(selector) {
+  const input = select(selector);
   return input.value;
 }
 
 export function select(selector) {
   const node = document.querySelector(selector);
+  console.error("node", node);
   if (!node) {
     throw new Error(`Element for selector ${selector} not found`);
   }

@@ -18,11 +18,12 @@ Angenommen("sind folgende Bohnenarten in der Anwendung sichtbar", function(
   });
 });
 
-Wenn("der Bohnenverkäufer den Einkaufspreis auf {string} Euro setzt", function(
-  ekp
-) {
-  setInputValue("#ekp", ekp);
-});
+Wenn(
+  "der Bohnenverkäufer den Einkaufspreis auf {string} Euro setzt",
+  async function(ekp) {
+    await setInputValue("#ekp", ekp);
+  }
+);
 
 Dann("ist der Verkaufspreis {string} Euro", function(vkp) {
   const vkpNode = document.querySelector("#vkp");
