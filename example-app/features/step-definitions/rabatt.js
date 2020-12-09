@@ -21,5 +21,5 @@ Dann("ist der Verkaufspreis mit Rabatt {string} Euro", function(vkpRabatt) {
 
 // noinspection JSUnusedGlobalSymbols
 export function logDocument() {
-  console.error(global.jsdom.serialize());
+  //console.error(global.jsdom.serialize());
 }

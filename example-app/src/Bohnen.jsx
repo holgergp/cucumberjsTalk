@@ -6,7 +6,7 @@ export const Bohnen = () => {
   const dispatch = useDispatch();
   const updateData = bohne => dispatch(updateDataAction(bohne));
   const bohnen = useSelector(state => state.bohnen);
-
+  console.log("---------- Render me ----------");
   return (
     <div className="tableContainer">
       <table>

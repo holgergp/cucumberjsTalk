@@ -1,7 +1,13 @@
 import { JSDOM } from "jsdom";
+import globalJsDom from "jsdom-global";
+import "jsdom-global/register";
 
 export default function() {
-  global.jsdom = new JSDOM(
+  globalJsDom(
+    '<!doctype html><html><body><div id="root"></div></div></body></html>',
+    { url: "https://testhost.org/sd-client/" }
+  );
+  /* global.jsdom = new JSDOM(
     '<!doctype html><html><body><div id="root"></div></div></body></html>',
     { url: "https://testhost.org/sd-client/" }
   );
@@ -12,6 +18,7 @@ export default function() {
   global.HTMLElement = window.HTMLElement;
 
   global.document = global.window.document;
-  global.navigator = { userAgent: "" };
+  global.navigator = { userAgent: "" };*/
+  global.document.serialize();
   return global.document.getElementById("root");
 }
