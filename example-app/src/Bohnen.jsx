@@ -4,8 +4,8 @@ import { updateDataAction } from "./reducer";
 
 export const Bohnen = () => {
   const dispatch = useDispatch();
-  const updateData = bohne => dispatch(updateDataAction(bohne));
-  const bohnen = useSelector(state => state.bohnen);
+  const updateData = (bohne) => dispatch(updateDataAction(bohne));
+  const bohnen = useSelector((state) => state.bohnen);
 
   return (
     <div className="tableContainer">
@@ -15,20 +15,20 @@ export const Bohnen = () => {
             <th>Bohnenart</th>
             <th>Preis beim Händler in Euro</th>
             <th>Marge in Prozent</th>
-            <th>Rabatt</th>
+            {/*<th>Rabatt</th>*/}
             <th>Preis im Laden in Euro ohne Rabatt</th>
-            <th>Preis im Laden</th>
+            {/*<th>Preis im Laden</th>*/}
           </tr>
         </thead>
         <tbody>
           {bohnen &&
-            bohnen.map(bohne => (
+            bohnen.map((bohne) => (
               <tr key={bohne.id}>
                 <td>
                   <input
                     type="text"
                     id="art"
-                    onChange={event =>
+                    onChange={(event) =>
                       updateData({ ...bohne, art: event.target.value })
                     }
                     value={bohne.art}
@@ -38,7 +38,7 @@ export const Bohnen = () => {
                   <input
                     type="number"
                     id="ekp"
-                    onChange={event =>
+                    onChange={(event) =>
                       updateData({ ...bohne, ekp: event.target.value })
                     }
                     value={bohne.ekp}
@@ -49,14 +49,14 @@ export const Bohnen = () => {
                     type="number"
                     id="marge"
                     disabled={true}
-                    onChange={event =>
+                    onChange={(event) =>
                       updateData({ ...bohne, marge: event.target.value })
                     }
                     value={bohne.marge}
                   />
                 </td>
-                <td>
-                  <input
+                {/* <td>
+                 <input
                     type="number"
                     id="rabatt"
                     onChange={event =>
@@ -64,19 +64,19 @@ export const Bohnen = () => {
                     }
                     value={bohne.rabatt}
                   />
-                </td>
+                </td>*/}
                 <td>
                   <input
                     type="number"
                     id="vkp"
-                    onChange={event =>
+                    onChange={(event) =>
                       updateData({ ...bohne, vkp: event.target.value })
                     }
                     value={bohne.vkp}
                   />
                 </td>
-                <td>
-                  <input
+                {/*  <td>
+                <input
                     type="number"
                     id="vkpRabatt"
                     disabled={true}
@@ -85,7 +85,7 @@ export const Bohnen = () => {
                     }
                     value={bohne.vkpRabatt}
                   />
-                </td>
+                </td>*/}
               </tr>
             ))}
         </tbody>
